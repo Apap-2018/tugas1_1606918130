@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<title>View Termuda Tertua</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<object th:include="fragments/fragment :: css" th:remove="tag"></object>
+		<object th:include="fragments/fragment :: js" th:remove="tag"></object>
+	</head>
+	
+	<nav th:replace="fragments/fragment :: navbar"></nav>
+	
+	<body>
+	<div style="padding: 32px">
+	<br>
+	<div class="row">
+  			<div class="column" style="background-color:white;">
+				<h2>Data Pegawai Termuda</h2>
+				
+				<h4 th:text="'NIP : '+${pegawaiMuda.nip}"></h4>
+				<h4 th:text="'Nama : '+${pegawaiMuda.nama}"></h4>
+				<h4 th:text="'Tempat Lahir : '+${pegawaiMuda.tempatLahir}"></h4>
+				<h4 th:text="'Tanggal Lahir : '+${pegawaiMuda.tanggalLahir}"></h4>
+				<h4 th:text="'Tahun Masuk : '+${pegawaiMuda.tahunMasuk}"></h4>
+				<h4 th:text="'Nama Instansi : ' + ${pegawaiMuda.instansi.nama} + ' - ' + ${pegawaiMuda.instansi.provinsi.nama}"></h4>
+				<ul> 
+				<li th:each="jabatan : ${pegawaiMuda.jabatanList}"
+					th:text="${jabatan.nama}"> </li>
+				</ul>
+			</div>
+		
+			<div class="column" style="background-color:white;">		
+				<h2>Data Pegawai Tertua</h2>
+				
+				<h4 th:text="'NIP : '+${pegawaiTua.nip}"></h4>
+				<h4 th:text="'Nama : '+${pegawaiTua.nama}"></h4>
+				<h4 th:text="'Tempat Lahir : '+${pegawaiTua.tempatLahir}"></h4>
+				<h4 th:text="'Tanggal Lahir : '+${pegawaiTua.tanggalLahir}"></h4>
+				<h4 th:text="'Tahun Masuk : '+${pegawaiTua.tahunMasuk}"></h4>
+				<h4 th:text="'Nama Instansi : ' + ${pegawaiTua.instansi.nama} + ' - ' + ${pegawaiTua.instansi.provinsi.nama}"></h4>
+				<ul> 
+				<li th:each="jabatan : ${pegawaiTua.jabatanList}"
+					th:text="${jabatan.nama}"> </li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+	</body>
+</html>
