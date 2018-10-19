@@ -57,10 +57,6 @@ public class JabatanModel implements Serializable {
 	public void setSizePegawai(int jumlahPegawai) {
 		this.jumlahPegawai = jumlahPegawai;
 	}
-	
-	public List<PegawaiModel> getPegawaiList() {
-		return pegawaiList;
-	}
 
 	public long getId() {
 		return id;

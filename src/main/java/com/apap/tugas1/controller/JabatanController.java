@@ -80,7 +80,7 @@ public class JabatanController {
 	public String hapusJabatanSubmit(@ModelAttribute JabatanModel jabatan, Model model) {
 		JabatanModel jabatanDelete = jabatanService.getJabatanDetailById(jabatan.getId());
 		model.addAttribute("jabatan", jabatanDelete);
-		if (jabatanDelete.getPegawaiList().size() != 0) {
+		if (jabatanDelete.jabatanSize() != 0) {
 			return "gagal-delete-jabatan";
 		}
 		else {
