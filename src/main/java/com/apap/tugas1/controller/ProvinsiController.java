@@ -27,10 +27,6 @@ public class ProvinsiController {
 	@RequestMapping(value = "/provinsi-get", method = RequestMethod.GET)
 	public @ResponseBody List<InstansiModel> findAllInstansi(@RequestParam(value = "provinsiId", required = true) long provinsiId, Model model) {
 	    ProvinsiModel provinsi = provinsiService.getProvinsiDetailById(provinsiId);
-	    //for (InstansiModel instansi:provinsi.getInstansiList()) {
-	    	//System.out.println(instansi.getNama());
-	    //}
-	    //model.addAttribute("listInstansi",provinsi.getInstansiList());
 	    return provinsi.getInstansiList(); 
 	}
 	

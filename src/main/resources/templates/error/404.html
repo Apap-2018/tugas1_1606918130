@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>404 Not Found</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<object th:include="fragments/fragment :: css" th:remove="tag"></object>
+	<object th:include="fragments/fragment :: js" th:remove="tag"></object>
+</head>
+
+<nav th:replace="fragments/fragment :: navbar"></nav>
+
+<body>
+	<div style="padding: 32px">
+	<br>
+	<div class="container-fluid">
+	<div class="alert alert-danger">
+	<h4>404 Error!</h4>
+	<p>Halaman tidak ditemukan.</p>
+	</div>
+	</div>
+	</div>
+</body>
+</html>
